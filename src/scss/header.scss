@@ -4,12 +4,17 @@
 	top: 0;
 	left: 0;
 	width: 100%;
+	z-index: 50;
   @include adaptiveValue("padding-top", 60, 10);
   @include adaptiveValue("padding-bottom", 60, 10);
 
   &__container-big {
     display: flex;
+	  grid-template-columns: rem(300) 1fr rem(300);
     align-items: center;
+	  @media (max-width: em(1080)) {
+		  grid-template-columns: auto 1fr auto;
+	  }
   }
 
   &__logo{

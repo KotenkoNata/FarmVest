@@ -8,9 +8,10 @@
 
 .title{
   font-weight: 700;
-  line-height: 1.12;
+  line-height: 0.92;
   font-size: rem(70);
   color: #fff;
+  @include adaptiveValue("font-size", 70, 45);
   span{
     color:$greenColor;
   }
