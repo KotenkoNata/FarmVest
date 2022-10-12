@@ -1,8 +1,12 @@
 //====================================================================================================
 .main-block{
 
-  &__container{
+  &__container-big{
     position: relative;
+  }
+
+  &__container{
+
   }
 
   &__content{
@@ -32,6 +36,41 @@
   &__form {
     @media (max-width: em(430)) {
       width: 100%;
+    }
+  }
+}
+
+.icons-main-block{
+  pointer-events: none;
+  &__item{
+    position: absolute;
+    &_1{
+      top: percent(675, 974);
+      left: rem(15);
+    }
+    &_2{
+      top: percent(380, 974);
+      left: percent(237, 1620);
+    }
+    &_3{
+      top: percent(757, 974);
+      left: percent(403, 1620);
+    }
+    &_4{
+      top: percent(134, 974);
+      left: percent(1149, 1620);
+    }
+    &_5{
+      top: percent(419, 974);
+      left: percent(1325, 1620);
+    }
+    &_6{
+      top: percent(776, 974);
+      left: percent(1321, 1620);
+    }
+    &_7{
+      top: percent(367, 974);
+      right: rem(15);
     }
   }
 }
