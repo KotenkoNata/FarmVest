@@ -12,17 +12,45 @@
   font-size: rem(70);
   color: #fff;
   @include adaptiveValue("font-size", 70, 45);
+  &_s64{
+    @include adaptiveValue("font-size", 64, 40);
+  }
   span{
     color:$greenColor;
   }
 }
-
+//====================================================================================================
+.text{
+  line-height: 180%;
+}
+//====================================================================================================
 .form{
   &__input{
 
   }
 
   &__button{
+
+  }
+}
+
+//====================================================================================================
+
+.image-block {
+  display: flex;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: rem(20);
+  @include adaptiveValue("padding-top", 165, 30);
+  @include adaptiveValue("padding-bottom", 165, 30);
+  @include adaptiveValue("padding-left", 45, 30);
+  @include adaptiveValue("padding-right", 45, 30);
+
+  &__item{
+    flex: 1 1 100%;
+    img{
+      max-width: 100%;
+      border-radius: rem(20);
+    }
 
   }
 }
