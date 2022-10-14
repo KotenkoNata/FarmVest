@@ -5,10 +5,6 @@
     position: relative;
   }
 
-  &__container{
-
-  }
-
   &__content{
     @include adaptiveValue("padding-top", 250, 150);
     @include adaptiveValue("padding-bottom", 200, 50);
@@ -111,7 +107,7 @@
 }
 //====================================================================================================
 .partners{
-  @include adaptiveValue("padding-bottom", 200, 30);
+  @include adaptiveValue("padding-bottom", 200, 50);
   &__container{
     display: flex;
     justify-content: space-between;
@@ -133,13 +129,23 @@
 }
 //====================================================================================================
 .how{
+  @include adaptiveValue("padding-bottom", 100, 25);
+
   &__container{
     display: grid;
-    grid-template-columns: 1fr percent(750, 1420);
+    row-gap: rem(30);
+
+    @media (min-width: $tablet){
+      grid-template-columns: 1fr percent(750, 1420);
+    }
   }
 
   &__content{
-    @include adaptiveValue("padding-right", 95, 30);
+    @include adaptiveValue("padding-right", 95, 30, 1420, 992, 2);
+
+    @media (max-width: $mobileSmall) {
+      text-align: center;
+    }
   }
 
   &__title{
@@ -168,6 +174,11 @@
     &:not(:last-child){
       @include adaptiveValue("margin-bottom", 48, 30);
     }
+    @media (max-width: $mobileSmall) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   &__icon{
@@ -175,6 +186,7 @@
     flex: 0 0 rem(110);
     height: rem(110);
     display: flex;
+    width: rem(110);
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 128, 0, 0.1);
