@@ -3,6 +3,7 @@
 
 .button {
 	font-family: Lato;
+	text-align: center;
 	font-weight: 500;
 	display: inline-block;
 	line-height: 1.22;
@@ -18,15 +19,15 @@
 			background-color: #1b8b1b;
 		}
 	}
-	&_border{
+	&_border {
 		background-color: transparent;
-		border: 1px solid white;
+		border: 1px solid #fff;
 		padding: rem(20) rem(25);
 		@media (any-hover: hover) {
 			&:hover {
 				border: 1px solid $greenColor;
 				color: $greenColor;
-				background-color: #1b2327;
+				background-color: transparent;
 			}
 		}
 	}
@@ -35,7 +36,7 @@
 	}
 	@media (max-width: $tablet) {
 		padding: rem(15) rem(20);
-		&_border{
+		&_border {
 			padding: rem(14) rem(20);
 		}
 	}

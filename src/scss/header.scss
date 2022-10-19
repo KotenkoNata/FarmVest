@@ -16,7 +16,7 @@
 	}
 
   &__container-big {
-    display: flex;
+    display: grid;
 	  grid-template-columns: rem(300) 1fr rem(300);
     align-items: center;
 	  @media (max-width: em(1080)) {
@@ -33,7 +33,6 @@
 	  }
   }
   &__menu {
-    flex: 1 1 auto;
   }
   &__actions {
 	  position: relative;
@@ -64,6 +63,7 @@ padding: 0 rem(10);
 			@include adaptiveValue("padding-top", 180, 120, 768, 320, 2);
 			padding-left: rem(15);
 			padding-right: rem(15);
+			padding-bottom: rem(30);
 			&::before{
 				content: "";
 				position: fixed;
@@ -71,7 +71,7 @@ padding: 0 rem(10);
 				left: -100%;
 				transition: all 0.3s ease 0s;
 				width: 100%;
-				@include adaptiveValue("height", 85, 72, 768, 320, 2);
+				@include adaptiveValue("height", 105, 72, 768, 320, 2);
 				background-color: #232e33;
 				z-index: 2;
 			}
@@ -96,6 +96,7 @@ padding: 0 rem(10);
 	  @media (max-width: $mobile){
 		  flex-direction: column;
 		  text-align: center;
+		  row-gap: rem(30);
 	  }
   }
 	&__link{
