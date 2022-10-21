@@ -212,15 +212,72 @@
     }
   }
   &__image{
-
+    .image-block__circle{
+      top: auto;
+      bottom: 0;
+      right: auto;
+      left: 0;
+    }
+    .image-block__circle_1{
+      &:before{
+        transform: translate(calc(-50% + rem(18)), 20%);
+      }
+    }
+    .image-block__circle_2{
+      &:before{
+        transform: translate(calc(-50% + rem(20)), 6%);
+      }
+    }
   }
   &__content{
     @include adaptiveValue("padding-left", 126, 30, 1420, 992, 2);
   }
   &__title{
-
+    &:not(:last-child){
+      @include adaptiveValue("margin-bottom", 30, 20);
+    }
   }
   &__text{
+    &:not(:last-child){
+      @include adaptiveValue("margin-bottom", 48, 30);
+    }
+  }
+  &__spollers{
 
+  }
+}
+
+.spollers-pathway{
+
+  &__item{
+    border-radius: rem(10);
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.05);
+  }
+  &__title{
+    width: 100%;
+    background-color: transparent;
+    text-align: left;
+    padding: rem(24) rem(30);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 177%;
+    font-size: rem(24);
+    &::after{
+      content: "";
+      background: url("@img/icons/pathway/Vector.svg") center / 100% no-repeat;
+      flex: 0 0 rem(24);
+      height: rem(24);
+      transition: all 0.3s ease 0s;
+    }
+    &._spoller-active{
+      &::after{
+        transform: rotate(-180deg);
+      }
+    }
+  }
+  &__body{
+    padding: rem(0) rem(30) rem(24) rem(30);
   }
 }
