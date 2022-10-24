@@ -139,23 +139,20 @@
     }
   }
   &__content {
-    @include adaptiveValue("padding-right", 95, -10, 1420, 992, 2);
+    @include adaptiveValue("padding-right", 95, 30, 1420, 992, 2);
+    @media (max-width: $mobileSmall) {
+      text-align: center;
+    }
   }
   &__title {
     &:not(:last-child) {
       @include adaptiveValue("margin-bottom", 30, 20);
-    }
-    @media (max-width: $mobileSmall) {
-      text-align: center;
     }
   }
 
   &__text {
     &:not(:last-child) {
       @include adaptiveValue("margin-bottom", 48, 30);
-    }
-    @media (max-width: $mobileSmall) {
-      text-align: center;
     }
   }
 }
@@ -202,16 +199,17 @@
   @include adaptiveValue("padding-bottom", 100, 25);
 
   &__container{
-    display: grid;
+    display: flex;
     row-gap: rem(30);
-    @media (min-width: $tablet) {
-      grid-template-columns: percent(694, 1420) 1fr;
+    @media (max-width: $tablet) {
+      flex-direction: column-reverse;
     }
     &_big{
 
     }
   }
   &__image{
+    flex: 0 0 percent(694, 1420);
     .image-block__circle{
       top: auto;
       bottom: 0;
@@ -230,6 +228,7 @@
     }
   }
   &__content{
+    flex: 1 1 auto;
     @include adaptiveValue("padding-left", 126, 30, 1420, 992, 2);
   }
   &__title{
@@ -243,7 +242,8 @@
     }
   }
   &__spollers{
-
+    display: grid;
+    gap: rem(24);
   }
 }
 
@@ -255,6 +255,8 @@
     background: rgba(255, 255, 255, 0.05);
   }
   &__title{
+    @include adaptiveValue("font-size", 24, 18);
+    gap: rem(10);
     width: 100%;
     background-color: transparent;
     text-align: left;
@@ -276,8 +278,15 @@
         transform: rotate(-180deg);
       }
     }
+    @media (max-width:$mobileSmall) {
+      line-height: 130%;
+      padding: rem(18) rem(20);
+    }
   }
   &__body{
     padding: rem(0) rem(30) rem(24) rem(30);
+    @media (max-width:$mobileSmall) {
+      padding: rem(0) rem(20) rem(18) rem(20);
+    }
   }
 }
