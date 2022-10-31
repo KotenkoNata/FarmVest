@@ -140,9 +140,6 @@
   }
   &__content {
     @include adaptiveValue("padding-right", 95, 30, 1420, 992, 2);
-    @media (max-width: $mobileSmall) {
-      text-align: center;
-    }
   }
   &__title {
     &:not(:last-child) {
@@ -204,12 +201,16 @@
     @media (max-width: $tablet) {
       flex-direction: column-reverse;
     }
-    &_big{
+    &-big{
 
     }
   }
   &__image{
     flex: 0 0 percent(694, 1420);
+    @media (max-width: $tablet) {
+      width: 100%;
+    }
+
     .image-block__circle{
       top: auto;
       bottom: 0;
@@ -287,6 +288,77 @@
     padding: rem(0) rem(30) rem(24) rem(30);
     @media (max-width:$mobileSmall) {
       padding: rem(0) rem(20) rem(18) rem(20);
+    }
+  }
+}
+
+//====================================================================================================
+
+.why{
+  &__container{
+    display: grid;
+    row-gap: rem(30);
+    @media (min-width: $tablet) {
+      grid-template-columns: 1fr percent(680, 1420);
+    }
+  }
+
+  &__content{
+    @include adaptiveValue("padding-right", 177, 30, 1420, 992, 2);
+  }
+
+  &__title{
+    &:not(:last-child){
+      @include adaptiveValue("margin-bottom", 30, 20);
+    }
+  }
+
+  &__text{
+    &:not(:last-child){
+      @include adaptiveValue("margin-bottom", 48, 30);
+    }
+  }
+
+  &__steps{
+    &:not(:last-child){
+      @include adaptiveValue("margin-bottom", 55, 30);
+    }
+  }
+
+  &__button{
+    min-width: rem(222);
+    @media (max-width: $mobileSmall) {
+      width: 100%;
+    }
+  }
+
+  &__image{
+  }
+
+}
+
+.steps-why {
+  list-style: none;
+  counter-reset: item;
+  display: grid;
+  @include adaptiveValue("gap", 48, 20);
+  &__item {
+    font-size: rem(20);
+    line-height: 2.75;
+    display: flex;
+    @include adaptiveValue("gap", 48, 20);
+    &::before{
+      content: "";
+      width: rem(64);
+      height: rem(64);
+      counter-increment: item;
+      content: counter(item);
+      background: rgba(255, 255, 255, 0.05);
+      font-size: rem(36);
+      text-align: center;
+      border-radius: 50%;
+      line-height: rem(70);
+      font-weight: 600;
     }
   }
 }
