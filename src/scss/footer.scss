@@ -1,3 +1,46 @@
 //====================================================================================================
+.footer{
+  background: rgba(53, 64, 70, 0.5);
+  &__main{
+    @include adaptiveValue("padding-top", 68, 30);
+    @include adaptiveValue("padding-bottom", 100, 30);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.42);
+  }
+  &__bottom{
+    @include adaptiveValue("padding-top", 55, 30);
+    @include adaptiveValue("padding-bottom", 55, 30);
+  }
+}
 
+.main-footer{
+  display: grid;
+  gap: rem(20);
+  grid-template-columns: repeat(2, 1fr);
+
+  &__form{
+    justify-self: center;
+  }
+
+  &__contacts{
+    justify-self: end;
+  }
+
+  &__info{
+    max-width: rem(330);
+  }
+
+  &__logo{
+    &:not(:last-child){
+      margin-bottom: rem(24);
+    }
+  }
+}
+
+.form-main{
+  &__text{
+    &:not(:last-child){
+      margin-bottom: rem(24);
+    }
+  }
+}
 //====================================================================================================
