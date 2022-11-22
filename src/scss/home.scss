@@ -145,11 +145,17 @@
     &:not(:last-child) {
       @include adaptiveValue("margin-bottom", 30, 20);
     }
+    @media (max-width: $mobileSmall) {
+      text-align: center;
+    }
   }
 
   &__text {
     &:not(:last-child) {
       @include adaptiveValue("margin-bottom", 48, 30);
+    }
+    @media (max-width: $mobileSmall) {
+      text-align: center;
     }
   }
 }
@@ -236,10 +242,16 @@
     &:not(:last-child){
       @include adaptiveValue("margin-bottom", 30, 20);
     }
+    @media (max-width: $mobileSmall) {
+      text-align: center;
+    }
   }
   &__text{
     &:not(:last-child){
       @include adaptiveValue("margin-bottom", 48, 30);
+    }
+    @media (max-width: $mobileSmall) {
+      text-align: center;
     }
   }
   &__spollers{
@@ -311,11 +323,17 @@
     &:not(:last-child){
       @include adaptiveValue("margin-bottom", 30, 20);
     }
+    @media (max-width: $mobileSmall) {
+      text-align: center;
+    }
   }
 
   &__text{
     &:not(:last-child){
       @include adaptiveValue("margin-bottom", 48, 30);
+    }
+    @media (max-width: $mobileSmall) {
+      text-align: center;
     }
   }
 
@@ -348,7 +366,6 @@
     display: flex;
     @include adaptiveValue("gap", 48, 20);
     &::before{
-      content: "";
       width: rem(64);
       height: rem(64);
       counter-increment: item;
@@ -360,5 +377,75 @@
       line-height: rem(70);
       font-weight: 600;
     }
+  }
+}
+
+//====================================================================================================
+
+.reviews{
+  @include adaptiveValue("padding-top", 100, 25);
+  @include adaptiveValue("padding-bottom", 200, 50);
+
+  &__container{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+  }
+
+  &__title{
+    text-align: center;
+    &:not(:last-child){
+      @include adaptiveValue("margin-bottom", 32, 20);
+    }
+  }
+
+  &__text{
+    max-width: rem(500);
+    &:not(:last-child){
+      @include adaptiveValue("margin-bottom", 48, 30);
+    }
+  }
+  &__items{
+    display: flex;
+    @include adaptiveValue("gap", 48, 25);
+    &:not(:last-child){
+      @include adaptiveValue("margin-bottom", 48, 30);
+    }
+    @media (max-width: $mobileSmall) {
+      flex-direction: column;
+    }
+  }
+  &__item{
+    flex: 0 1 50%;
+  }
+  &__button{
+    min-width: rem(222);
+  }
+}
+
+.item-review{
+  display: flex;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: rem(20);
+  overflow: hidden;
+  
+  @media (max-width: $tablet) {
+    flex-direction: column;
+  }
+
+  &__image-ibg{
+    padding-bottom: percent(377, 686);
+    flex: 0 0 percent(300, 686);
+  }
+  &__body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: rem(15);
+    @include adaptiveValue("padding", 32, 20);
+  }
+
+  &__name{
+    font-weight: 700;
   }
 }
