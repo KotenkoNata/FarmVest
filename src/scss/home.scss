@@ -140,6 +140,9 @@
   }
   &__content {
     @include adaptiveValue("padding-right", 95, 30, 1420, 992, 2);
+    @media (max-width: $mobile) {
+      padding-right: 0;
+    }
   }
   &__title {
     &:not(:last-child) {
@@ -237,6 +240,9 @@
   &__content{
     flex: 1 1 auto;
     @include adaptiveValue("padding-left", 126, 30, 1420, 992, 2);
+    @media (max-width: $mobile) {
+      padding-left: 0;
+    }
   }
   &__title{
     &:not(:last-child){
@@ -317,6 +323,9 @@
 
   &__content{
     @include adaptiveValue("padding-right", 177, 30, 1420, 992, 2);
+    @media (max-width: $mobile) {
+      padding-right: 0;
+    }
   }
 
   &__title{
