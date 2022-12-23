@@ -25,8 +25,14 @@
   }
 
   &__logo{
+	  font-family: Lato;
 	  position: relative;
 	  z-index: 5;
+	  font-style: normal;
+	  font-weight: 500;
+	  font-size: 36px;
+	  line-height: 43px;
+	  color:$text-main;
     @include adaptiveValue("width", 143, 120, 1620, 768, 1);
 	  img{
 		  max-width: 100%;

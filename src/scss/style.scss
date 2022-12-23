@@ -35,6 +35,8 @@ $greenColor: #23b123;
 	--icon-highlight: rgba(0, 128, 0, 0.1);
 	--footer-background: rgba(53, 64, 70, 0.5);
 	--app-section: rgba(255, 255, 255, 0.07);
+	--circle-color: #008000;
+	--main-enter-frame: rgba(38, 50, 56, 0.1);
 }
 
 $main-color: var(--main-color);
@@ -44,6 +46,8 @@ $text-highlight: var(--text-highlight);
 $icon-highlight: var(--icon-highlight);
 $footer-background: var(--footer-background);
 $app-section: var(--app-section);
+$circle-color: var(--circle-color);
+$main-enter-frame: var(--main-enter-frame);
 
 
 
@@ -101,6 +105,8 @@ body {
 		--icon-highlight: rgba(0, 128, 0, 0.1);
 		--footer-background: rgba(242, 248, 242, 0.5);
 		--app-section: rgba(0, 128, 0, 0.05);
+		--circle-color: #008000;
+		--main-enter-frame: #E4E7E6;
 	}
 	&[data-theme="dark"] {
 		--main-color: #263238;
@@ -110,6 +116,8 @@ body {
 		--icon-highlight: rgba(0, 128, 0, 0.1);
 		--footer-background: rgba(53, 64, 70, 0.5);
 		--app-section: rgba(255, 255, 255, 0.07);
+		--circle-color: #FFFFFF;
+		--main-enter-frame: #FFFFFF;
 	}
 }
 
