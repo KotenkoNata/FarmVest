@@ -4,7 +4,7 @@
   &__main{
     @include adaptiveValue("padding-top", 68, 30);
     @include adaptiveValue("padding-bottom", 100, 30);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.42);
+    border-bottom: 1px solid #92989B;
   }
   &__bottom{
     @include adaptiveValue("padding-top", 55, 30);
@@ -103,7 +103,7 @@
     width: rem(48);
     height: rem(48);
     border-radius: 50%;
-    background-color: #fff;
+    background-color: $app-section;
     display: flex;
     justify-content: center;
     align-items: center;

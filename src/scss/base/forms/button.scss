@@ -8,7 +8,7 @@
 	display: inline-block;
 	line-height: 1.22;
 	padding: rem(21) rem(25);
-	background-color: #23b123;
+	background-color: $text-highlight;
 	border-radius: rem(10);
 	transition: all 0.3s ease 0s;
 	@media (min-width: $tablet) {
@@ -24,7 +24,7 @@
 	}
 	&_border {
 		background-color: transparent;
-		border: 1px solid #fff;
+		border: 1px solid $text-main;
 		padding: rem(20) rem(25);
 		@media (any-hover: hover) {
 			&:hover {

@@ -189,8 +189,8 @@ padding: 0 rem(10);
 			background-color: aliceblue;
 		}
 		&:checked + label {
-			background-color: rgb(25, 26, 37);
-			border: 2px solid whitesmoke;
+			background-color: #263238;
+			border: 2px solid white;
 		}
 	}
 
@@ -213,7 +213,7 @@ padding: 0 rem(10);
 			top: 50%;
 			left: 5px;
 			transform: translateY(-50%);
-			background-color: rgb(46, 42, 68);
+			background-color: #263238;
 			transition: 0.5s ease;
 		}
 	}

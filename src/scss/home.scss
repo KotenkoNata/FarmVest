@@ -380,6 +380,7 @@
       counter-increment: item;
       content: counter(item);
       background: $image-background;
+      color: #008000;
       font-size: rem(36);
       text-align: center;
       border-radius: 50%;
