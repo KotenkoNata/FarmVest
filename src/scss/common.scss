@@ -10,7 +10,7 @@
   font-weight: 700;
   line-height: 0.92;
   font-size: rem(70);
-  color: #fff;
+  color: $text-main;
   @include adaptiveValue("font-size", 70, 45);
   &_s64{
     @include adaptiveValue("font-size", 64, 40);
@@ -19,7 +19,7 @@
     @include adaptiveValue("font-size", 56, 35);
   }
   span{
-    color:$greenColor;
+    color:$text-highlight;
   }
 }
 //====================================================================================================
@@ -43,7 +43,7 @@
   align-self: start;
   display: flex;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.05);
+  background: $image-background;
   border-radius: rem(20);
   @include adaptiveValue("padding-top", 165, 30);
   @include adaptiveValue("padding-bottom", 165, 30);

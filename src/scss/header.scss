@@ -106,7 +106,7 @@ padding: 0 rem(10);
 		transition: color 0.3s ease 0s;
 		@media (any-hover: hover) {
 			&:hover{
-				color: $greenColor;
+				color: $text-highlight;
 			}
 
 		}
@@ -162,6 +162,53 @@ padding: 0 rem(10);
 				bottom: calc(50% - rem(1));
 				transform: rotate(45deg);
 			}
+		}
+	}
+}
+
+.theme-switcher {
+	position: absolute;
+
+	bottom: 25%;
+	left: -25%;
+
+	&__input {
+		width: 0;
+		height: 0;
+		display: none;
+		visibility: hidden;
+
+		&:checked + label::after {
+			left: calc(100% - 25px);
+			background-color: aliceblue;
+		}
+		&:checked + label {
+			background-color: rgb(25, 26, 37);
+			border: 2px solid whitesmoke;
+		}
+	}
+
+	&__label {
+		cursor: pointer;
+		display: block;
+		text-indent: -9999px;
+		height: 30px;
+		width: 60px;
+		border-radius: 50px;
+		background-color: rgb(255, 255, 255);
+		transition: 0.5s ease background-color;
+
+		&::after {
+			position: absolute;
+			content: "";
+			width: 20px;
+			height: 20px;
+			border-radius: 50px;
+			top: 50%;
+			left: 5px;
+			transform: translateY(-50%);
+			background-color: rgb(46, 42, 68);
+			transition: 0.5s ease;
 		}
 	}
 }

@@ -1,6 +1,6 @@
 //====================================================================================================
 .footer{
-  background: rgba(53, 64, 70, 0.5);
+  background: $footer-background;
   &__main{
     @include adaptiveValue("padding-top", 68, 30);
     @include adaptiveValue("padding-bottom", 100, 30);

@@ -188,7 +188,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(0, 128, 0, 0.1);
+    background: $icon-highlight;
   }
 
   &__title {
@@ -271,7 +271,7 @@
   &__item{
     border-radius: rem(10);
     overflow: hidden;
-    background: rgba(255, 255, 255, 0.05);
+    background: $image-background;
   }
   &__title{
     @include adaptiveValue("font-size", 24, 18);
@@ -379,7 +379,7 @@
       height: rem(64);
       counter-increment: item;
       content: counter(item);
-      background: rgba(255, 255, 255, 0.05);
+      background: $image-background;
       font-size: rem(36);
       text-align: center;
       border-radius: 50%;
@@ -437,7 +437,7 @@
 
 .item-review{
   display: flex;
-  background: rgba(255, 255, 255, 0.05);
+  background: $image-background;
   border-radius: rem(20);
   overflow: hidden;
   
@@ -474,7 +474,7 @@
     @include adaptiveValue("padding-bottom", 65, 30);
     @include adaptiveValue("padding-left", 30, 20);
     @include adaptiveValue("padding-right", 30, 20);
-    background: rgba(255, 255, 255, 0.07);
+    background: $app-section;
     border-radius: rem(20);
     text-align: center;
     display: grid;
