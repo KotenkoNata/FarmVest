@@ -398,8 +398,8 @@
 
   &__container{
     display: grid;
-    align-items: center;
-    justify-items: center;
+    align-self: center;
+    justify-self: center;
   }
 
   &__title{
@@ -479,7 +479,7 @@
     border-radius: rem(20);
     text-align: center;
     display: grid;
-    justify-items: center;
+    justify-self: center;
   }
 
   &__title{
