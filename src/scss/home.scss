@@ -400,6 +400,7 @@
     display: grid;
     align-self: center;
     justify-self: center;
+    justify-items: center;
   }
 
   &__title{
@@ -433,7 +434,6 @@
   }
   &__button{
     min-width: rem(222);
-    //margin: 0 auto;
   }
 }
 
@@ -485,6 +485,7 @@
 
   &__title{
     max-width: rem(600);
+    margin: 0 auto;
     &:not(:last-child){
       @include adaptiveValue("margin-bottom", 49, 20);
     }
@@ -509,7 +510,7 @@
       content: "";
       position: absolute;
       border-radius: 50%;
-      border: 1px solid rgba(255, 255, 255, 0.37);
+      border: 1px solid $circle-color;
       width: 100%;
       height: 100%;
       top: 0;
