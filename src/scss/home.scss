@@ -434,6 +434,9 @@
   }
   &__button{
     min-width: rem(222);
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
   }
 }
 

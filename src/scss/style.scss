@@ -37,6 +37,7 @@ $greenColor: #23b123;
 	--app-section: rgba(255, 255, 255, 0.07);
 	--circle-color: #008000;
 	--main-enter-frame: rgba(38, 50, 56, 0.1);
+	--menu-background: #263238;
 }
 
 $main-color: var(--main-color);
@@ -48,6 +49,7 @@ $footer-background: var(--footer-background);
 $app-section: var(--app-section);
 $circle-color: var(--circle-color);
 $main-enter-frame: var(--main-enter-frame);
+$menu-background: var(--menu-background);
 
 
 
@@ -107,6 +109,7 @@ body {
 		--app-section: rgba(0, 128, 0, 0.05);
 		--circle-color: #008000;
 		--main-enter-frame: #E4E7E6;
+		--menu-background: #E4E7E6;
 	}
 	&[data-theme="dark"] {
 		--main-color: #263238;
@@ -118,6 +121,7 @@ body {
 		--app-section: rgba(255, 255, 255, 0.07);
 		--circle-color: #FFFFFF;
 		--main-enter-frame: #FFFFFF;
+		--menu-background: #263238;
 	}
 }
 
