@@ -167,6 +167,13 @@
       text-align: center;
     }
   }
+
+  &__image{
+    flex: 0 0 percent(694, 1420);
+    @media (max-width: $tablet) {
+      width: 100%;
+    }
+  }
 }
 .steps-how {
   @media (max-width: $mobileSmall) {
@@ -382,6 +389,10 @@
   }
 
   &__image{
+    flex: 0 0 percent(694, 1420);
+    @media (max-width: $tablet) {
+      width: 100%;
+    }
   }
 
 }
