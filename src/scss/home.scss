@@ -329,7 +329,12 @@
   }
 
   &__content{
-    @include adaptiveValue("padding-right", 177, 0, 1420, 900);
+    //@include adaptiveValue("padding-right", 177, 0, 1420, 900);
+
+    padding-right: rem(177);
+    @media (max-width: $tablet) {
+      padding-right: rem(50);
+    }
     @media (max-width: $mobile) {
       padding-right: 0;
     }
@@ -438,7 +443,6 @@
     &:not(:last-child){
       @include adaptiveValue("margin-bottom", 48, 30);
     }
-
     @media (max-width: $tablet) {
       max-width: 100%;
     }
@@ -457,7 +461,8 @@
     flex: 0 1 50%;
   }
   &__button{
-    min-width: rem(222);
+    width: rem(222);
+    margin: 0 auto;
     @media (max-width: $mobile) {
       width: 100%;
     }
