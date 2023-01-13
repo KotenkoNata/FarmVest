@@ -252,7 +252,14 @@
   }
   &__content{
     flex: 1 1 auto;
-    @include adaptiveValue("padding-left", 126, 0, 1420, 900);
+    //@include adaptiveValue("padding-left", 126, 0, 1420, 900);
+
+    @media (min-width: $pc) {
+      padding-left: rem(126);
+    }
+    @media (min-width: $tablet) and (max-width: #{$pc}) {
+      padding-left: rem(30);
+    }
   }
   &__title{
     &:not(:last-child){
@@ -335,14 +342,11 @@
   }
 
   &__content{
-    //@include adaptiveValue("padding-right", 177, 0, 1420, 900);
-
-    padding-right: rem(177);
-    @media (max-width: $tablet) {
-      padding-right: rem(50);
+    @media (min-width: $pc) {
+      padding-right: rem(95);
     }
-    @media (max-width: $mobile) {
-      padding-right: 0;
+    @media (min-width: $tablet) and (max-width: #{$pc}) {
+      padding-right: rem(30);
     }
   }
 
@@ -446,10 +450,11 @@
 
   &__text{
     max-width: rem(500);
+    margin: 0 auto;
     &:not(:last-child){
       @include adaptiveValue("margin-bottom", 48, 30);
     }
-    @media (max-width: $tablet) {
+    @media (min-width: $tablet) and (max-width: #{$pc}) {
       max-width: 100%;
     }
   }
