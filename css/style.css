@@ -915,10 +915,6 @@ body[data-theme=dark] {
   row-gap: 1.875rem;
 }
 
-.why__content {
-  padding-right: 11.0625rem;
-}
-
 .why__button {
   min-width: 13.875rem;
 }
@@ -973,6 +969,7 @@ body[data-theme=dark] {
 
 .reviews__text {
   max-width: 31.25rem;
+  margin: 0 auto;
 }
 
 .reviews__items {
@@ -1091,12 +1088,6 @@ body[data-theme=dark] {
   .main-footer__contacts {
     -ms-grid-column-align: end;
         justify-self: end;
-  }
-}
-
-@media (min-width: 56.25em) {
-  .pathway__content {
-    padding-left: 7.875rem;
   }
 }
 
@@ -1247,6 +1238,10 @@ body[data-theme=dark] {
     padding-bottom: 6.25rem;
   }
 
+  .pathway__content {
+    padding-left: 7.875rem;
+  }
+
   .pathway__title:not(:last-child) {
     margin-bottom: 1.875rem;
   }
@@ -1257,6 +1252,10 @@ body[data-theme=dark] {
 
   .spollers-pathway__title {
     font-size: 1.5rem;
+  }
+
+  .why__content {
+    padding-right: 5.9375rem;
   }
 
   .why__title:not(:last-child) {
@@ -1473,10 +1472,6 @@ body[data-theme=dark] {
     padding-bottom: 1.5625rem;
   }
 
-  .pathway__content {
-    padding-left: 0.0000000625rem;
-  }
-
   .pathway__title:not(:last-child) {
     margin-bottom: 1.25rem;
   }
@@ -1653,10 +1648,6 @@ body[data-theme=dark] {
     text-align: center;
   }
 
-  .why__content {
-    padding-right: 3.125rem;
-  }
-
   .why__title {
     text-align: center;
   }
@@ -1672,10 +1663,6 @@ body[data-theme=dark] {
   .reviews__container {
     display: block;
     text-align: center;
-  }
-
-  .reviews__text {
-    max-width: 100%;
   }
 
   .item-review {
@@ -1831,10 +1818,6 @@ body[data-theme=dark] {
 
   .pathway__title {
     text-align: center;
-  }
-
-  .why__content {
-    padding-right: 0;
   }
 
   .why__title {
@@ -2672,20 +2655,18 @@ body[data-theme=dark] {
   .how__content {
     padding-right: 1.875rem;
   }
-}
 
-@media (min-width: 20em) and (max-width: 56.25em) {
-@supports (padding-left: clamp( 0.0000000625rem , -4.3448274892rem  +  21.7241377586vw , 7.875rem )) {
-    .pathway__content {
-      padding-left: clamp( 0.0000000625rem , -4.3448274892rem  +  21.7241377586vw , 7.875rem );
-    }
-}
+  .pathway__content {
+    padding-left: 1.875rem;
+  }
 
-@supports not (padding-left: clamp( 0.0000000625rem , -4.3448274892rem  +  21.7241377586vw , 7.875rem )) {
-    .pathway__content {
-      padding-left: calc(0.0000000625rem + 7.8749999375 * (100vw - 20rem) / 36.25);
-    }
-}
+  .why__content {
+    padding-right: 1.875rem;
+  }
+
+  .reviews__text {
+    max-width: 100%;
+  }
 }
 
 @media (any-hover: hover) {
