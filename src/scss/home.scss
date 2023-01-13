@@ -139,7 +139,13 @@
     }
   }
   &__content {
-    @include adaptiveValue("padding-right", 95, 0, 1420, 900);
+    //@include adaptiveValue("padding-right", 95, 0, 1420, 900);
+    @media (min-width: $pc) {
+      padding-right: rem(95);
+    }
+    @media (min-width: $tablet) and (max-width: #{$pc}) {
+      padding-right: rem(30);
+    }
   }
   &__title {
     &:not(:last-child) {
